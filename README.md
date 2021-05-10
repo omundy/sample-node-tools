@@ -7,7 +7,6 @@ Demonstrates
 
 - How to structure a static website with Javascript ***in the browser*** that also uses Node for automation
 - How to use Node to create a test web server thus avoiding CORS issues with external data on localhost
-- How to use Node to create a proxy server to avoid CORS issues on the frontend
 - How to use Node to import CSV, convert to JSON, and write to a `.json` file
 - How to use Node to import data from [Google Sheets](https://developers.google.com/sheets/api)
 - How to create a file for secure, platform-specific, data and ignore it with Git
