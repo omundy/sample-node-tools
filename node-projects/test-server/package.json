@@ -1,12 +1,11 @@
 {
-	"name": "node-server",
+	"name": "test-server",
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"start-dev": "nodemon --inspect server.js",
-		"start-https": "nodemon --inspect server-https.js",
+		"start-dev": "nodemon --ext '*' --trace-warnings server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",

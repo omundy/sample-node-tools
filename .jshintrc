@@ -1,14 +1,15 @@
 {
-	"indent": 1,
-	"strict": "implied",
-	"unused": false,
-	"node": true,
-	"browser": true,
-	"undef": true,
-	"validthis": true,
 	"esversion": 8,
+	"strict": "implied",
+	"devel": true,
+	"browser": true,
+	"node": true,
+	"indent": 1,
+	"undef": true,
+	"unused": false,
 	"globals": {
 		"$": false,
+		"fetch": true,
 		"d3": false
 	},
 	"-W079": false
