@@ -3,9 +3,9 @@ const imageinfo = require("imageinfo");
 const fs = require("fs");
 
 const basePath =
-	"/Users/owenmundy/Sites/_teaching/_code_web/critical-web-design-book/07-ethical-design/examples/accessibility-data/assets/img/";
-const inputPath = basePath + "users/";
-const outputPath = basePath + "users-200w/";
+	"/Users/owenmundy/Sites/_teaching/_code_web/critical-web-design-index/assets/";
+const inputPath = basePath + "img/";
+const outputPath = basePath + "img_t/";
 
 // async function expression used as an IIFE
 (async () => {
@@ -25,7 +25,6 @@ async function loop(filePath) {
 			if (/^\..*/.test(file)) return;
 			// console.log(filePath, file);
 
-			// double check it is PNG
 			fs.readFile(filePath + file, function (err, data) {
 				if (err) throw err;
 				let info = imageinfo(data);
@@ -34,11 +33,11 @@ async function loop(filePath) {
 				);
 
 				// make sure type matches
-				// if (info.mimeType !== "image/png") return;
-				if (info.mimeType !== "image/jpeg") return;
+				if (info.mimeType !== "image/png") return;
+				// if (info.mimeType !== "image/jpeg") return;
 
-				// EXPORT RESOLUTIONS -> tally-monsters
-				resizeAndSave(filePath, file, 200, outputPath);
+				// EXPORT RESOLUTIONS
+				resizeAndSave(filePath, file, 400, outputPath);
 			});
 			// test
 			// if (++count > 10) return;
